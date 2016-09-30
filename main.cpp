@@ -74,9 +74,11 @@ LRESULT CALLBACK WindProcedure(HWND hWnd, UINT Msg,
             {
                 for(int i = 0; i <width; i++)
                 {
-                    int swagandam = 3;
+                    int swagandam = 1;
                     swagandam = rand() % width;
-                    if(j % 2 == rand() % 3-0)
+                    if(j % 1/*vertical spacing*/
+                        == rand() %
+                        /*horizontal spacing*/1-0)
                     {
                         SetPixel(hDC, i, j, RGB(rand()%255, rand()%255, rand()%255));
                     }
@@ -87,7 +89,7 @@ LRESULT CALLBACK WindProcedure(HWND hWnd, UINT Msg,
         }
         ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
         unsigned long long time02 = ms.count();
-        TextOut(hDC, 0, 0, uint64ToString2((time02-time01)).c_str(), 13);
+        TextOut(hDC, 0, 0, uint64ToString2((time02-time01)).c_str(), 5);
         Beep(rand()%2000+20,rand()%300);
 
         //MessageBox(hWnd,floatToString((width*height)/(time02-time01)).c_str(),"", MB_OK);
