@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1461479317 source:c:\dev\dots\main.cpp
+	"main.h"
+
+1461472271 c:\dev\dots\main.h
+	<windows.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<cmath>
+	<random>
+	<iostream>
+	<vector>
+	<time.h>
+	<chrono>
+
